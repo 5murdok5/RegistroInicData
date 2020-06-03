@@ -7,6 +7,7 @@ Descarga o clona el proyecto
 Abrir una terminal dentro de la carpeta y ejecutar  el comando
 ```
 npm install
+npm i
 ```
 #### Paso número 3
 Dentro del proyecto en los en el archivo src/enviroments/enviroment.ts y src/enviroments/enviroment.prod.ts intercambia los valores de la variable firebaseConfig por los de tu proyecto de firebase
@@ -22,5 +23,5 @@ export const firebaseConfig = {
 };
 ```
 
-# Listo para el despliegue, ahora ya sabes que hacer...
- psst... psst..  (ionic serve)
+# Listo para el despliegue
+ionic serve
