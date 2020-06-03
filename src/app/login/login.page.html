@@ -17,10 +17,19 @@
       <ion-input [(ngModel)]="password" type="password" name="password" required="true"></ion-input>
     </ion-item>
     <ion-button class="ion-margin-top" type="submit" expand="block">Entrar</ion-button>
+ 
   </form>
+  <ion-button 
+  type="submit" 
+  color="danger"
+  (click)="authService.GoogleAuth()" 
+  expand="block">
+    Login with Google
+ </ion-button>
   <div class="ion-text-center ion-margin-top">
-    <a routerLink="/registro"><small>Olvidé mi Contraseña</small></a>
+    <a routerLink="/forgotpassword"><small>Olvidé mi Contraseña</small></a>
   </div>
-
-
+  <div class="ion-text-center ion-margin-top">
+    <a routerLink="/registration"><small>Crear Cuenta</small></a>
+  </div>
 </ion-content>

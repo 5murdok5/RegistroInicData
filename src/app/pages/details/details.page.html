@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle de Carrera</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item *ngIf="carrera">
+      <ion-input required type="text" placeholder="origen" [(ngModel)]="carrera.origen"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="carrera">
+      <ion-input required type="text" placeholder="destino" [(ngModel)]="carrera.destino"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveCarrera()">Save</ion-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+      <ion-fab-button color="danger" (click)="onRemoveCarrera(carreraId)" routerLink="/" routerDirection="forward">
+          <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>

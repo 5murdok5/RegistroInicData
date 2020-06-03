@@ -11,10 +11,13 @@ export class LoginPage implements OnInit {
 
   email: string;
   password: string;
-
-  constructor(private authService: AuthService, public router: Router) { }
+  constructor(
+    private authService: AuthService,
+    public router: Router,
+    ) { }
 
   ngOnInit() {
+    
   }
 
   doLogin()
@@ -25,5 +28,6 @@ export class LoginPage implements OnInit {
       alert('los datos son incorrectos o no existe el usuario');
     })
   }
+
 
 }
